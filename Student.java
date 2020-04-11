@@ -1,13 +1,13 @@
-import sun.font.TrueTypeGlyphMapper;
-
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 class Student {
 	String index;
 	String firstName;
 	String lastName;
-	List<Integer> labPoints = new ArrayList<Integer>(10)
+	List<Integer> labPoints = new ArrayList<Integer>(10);
+
 
 	//TODO constructor
 
@@ -52,19 +52,19 @@ class Student {
 
 	public double getAverage() {
 		//TODO
-		suma=0
-		for(int i=0;i<getLabPoints().length;i++){
-			suma+=getLabPoints()
+		int suma=0;
+		for(int i=0;i<getLabPoints().size();i++){
+			suma+=getLabPoints().get(i);
 		}
-		return suma/getLabPoints().length
+		return suma/getLabPoints().size();
 	}
 
 	public boolean hasSignature() {
 		//TODO
-		if(getLabPoints().length>8){
-			return true
+		if(getLabPoints().size()>8){
+			return true;
 		}
 		else
-			return false
+			return false;
 	}
 }
